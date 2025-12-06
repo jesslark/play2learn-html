@@ -1,0 +1,7 @@
+Todo:
+
+everything on the instructions
+favicon
+images
+play2learn logo
+use bootstrap to make it look nice?
