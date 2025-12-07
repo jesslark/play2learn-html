@@ -4,8 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Play2Learn: Home</title>
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"  
+        crossorigin="anonymous" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+  />
+  <link rel="stylesheet" href="stylesheets/styles.css">
 </head>
 <body>
-  <h1>Home</h1>
+  <div class="container">
+    <header class="logo display-6 text-center fw-bold pt-2">
+      <p>Play</p><p>2</p><p>Learn</p> <p>Arcade</p>
+    </header>
+
+    <div id="happyKidsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#happyKidsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#happyKidsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#happyKidsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/images/children-at-computer.jpg" class="d-block w-100" alt="children at a computer looking extremely happy">
+          <div class="carousel-caption">
+            <h5>"These games are so awesome!"</h5>
+            <p>Jason and Fiona</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="images/students-at-computers.jpg" class="d-block w-100" alt="a row of children using computers">
+          <div class="carousel-caption">
+            <h5>"We love computer time when we get to play the Play2Learn Arcade."</h5>
+            <p>Nathaniel, Jonathan, and Ricky</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="images/girl-at-computer.jpg" class="d-block w-100" alt="a small girl on a woman's lap using a computer">
+          <div class="carousel-caption">
+            <h5>"I like playing the math game with my mom."</h5>
+            <p>Johanna</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#happyKidsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#happyKidsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> <!-- End Carousel -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gamepad"></i> Games
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-book-open-reader"></i> Awesome Anagram Hunt</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-calculator"></i> Megacool Math Facts Practice</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-solid fa-circle-info"></i> About</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-regular fa-face-smile"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- End Navbar -->
+
+    <div class="pt-3 games-info">
+      <div class="row">
+        <div class="col-6 anagram p-3">
+          <i class="fa-solid fa-book-open-reader fa-6x float-start pb-3"></i>
+          <h1>Awesome Anagram Hunt</h1>
+          <p>asdf asdf asd fas dfas dfa sdf asdf asdfasd fas dfas dfas df asdf asd fas dfas df asdf asdfasdf asdf asdfasdfas dfasdf asdf asdfas df asdfasdf asdf asdf asdf a sdf asdf asd f sdf asdf asdfasd fas asdf asdfa sdfa sdfasdfas df</p>
+        </div>
+        <div class="col-6 math">
+          <i class="fa-solid fa-calculator fa-6x  float-start pb-3"></i>
+          <h1>Megacool Math Facts Practice</h1>
+          <p>asdf asdf asd fas dfas dfa sdf asdf asdfasd fas dfas dfas df asdf asd fas dfas df asdf asdfasdf asdf asdfasdfas dfasdf asdf asdfas df asdfasdf asdf asdf asdf a sdf asdf asd f sdf asdf asdfasd fas asdf asdfa sdfa sdfasdfas df</p>
+        </div>
+      </div>
+    </div> <!-- End Games Info -->
+
+    <div class="sticky-bottom footer">
+      ...footer content here
+    </div> <!-- End Footer -->
+
+  </div> <!-- End Container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+          crossorigin="anonymous" 
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+  ></script>
+  <script src="https://kit.fontawesome.com/35f7d74202.js" 
+          crossorigin="anonymous"
+          integrity="sha384-vaepow7SO+2U0I8/2Zbwz8H+MDllyqxAL3tIUFseIOoFqita5yHPHob8X06IZSS9"
+  ></script>
 </body>
 </html>

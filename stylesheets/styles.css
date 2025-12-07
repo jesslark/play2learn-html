@@ -1,0 +1,35 @@
+:root {
+  --white: #F2F2F2;
+  --white-low-transp: #f2f2f2e2;
+  --white-high-transp: #f2f2f2ba;
+  --purple: #4D2D8C;
+  --purple-transp: #4d2d8cab;
+  --pink: #C71E64;
+  --pink-transp: #C71E64ab;
+  --orange: #FF714B;
+  --orange-transp: #ff724bab;
+  --orange-high-transp: #ff724b77;
+}
+
+body {
+  background: linear-gradient(to top, black,black),
+              url(../images/back-to-school.jpg) no-repeat top center;
+}
+
+header, .games-info, .footer {
+  background: var(--white-low-transp);
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.logo p {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.carousel-caption {
+  background: var(--purple-transp);
+  border-radius: 10px;
+}
