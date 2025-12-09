@@ -10,13 +10,16 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
   />
   <link rel="stylesheet" href="../stylesheets/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 <body>
   <div class="container">
     <nav class="navbar navbar-expand-lg white border-bottom">
       <div class="container-fluid">
-        <a class="navbar-brand purple" href="../index.html">Play2Learn Arcade</a>
+        <a class="navbar-brand purple indie-flower" href="../index.html">Play2Learn Arcade</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,20 +58,20 @@
       <div class="row justify-content-center">
         <div class="col-md-6 math p-3">
           <i class="fa-solid fa-calculator fa-6x float-start pb-3 orange"></i>
-          <h1 class="pink">Megacool Math Game</h1>
+          <h1 class="pink indie-flower">Megacool Math Game</h1>
           <p>This is a simple, fun game for practicing basic math. Problems include addition, subtraction, multiplication, and division. The division facts are all without remainders, so you don't have to worry about decimals. Math is megacool!</p>
           <div id="game" class="pt-4">
-            <h2 class="pb-2 text-center">Math Facts Practice</h3>
+            <h2 class="pb-2 text-center indie-flower">Math Facts Practice</h3>
             <div id="setup-form">
 
               <div class="row">
                 <div class="col-4 text-end">Operation:</div>
                 <div class="col-4">
                   <select name="operation" id="operation">
-                    <option value="division">Division</option>
                     <option value="addition">Addition</option>
                     <option value="subtraction">Subtraction</option>
                     <option value="multiplication">Multiplication</option>
+                    <option value="division">Division</option>
                   </select>
                 </div>
                 <div class="col-4"><button id="go-button" class="btn">Go!</button></div>
@@ -106,8 +109,8 @@
                   <button id="btn9" value="9" class="btn">9</button>
                 </div>
                 <div class="row">
-                  <button id="btn0" type="button" value="0" class="btn">0</button>
-                  <button id="clear" type="button" value="clear" class="btn">CLEAR</button>
+                  <button id="btn0" value="0" class="btn">0</button>
+                  <button id="clear" value="clear" class="btn">CLEAR</button>
                 </div>
               </div>
 

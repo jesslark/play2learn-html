@@ -42,8 +42,10 @@ const buildResult = op => {
 }
 
 const buildGame = op => {
-  const operationDisplay = document.getElementById('operation-display')
-  const question = document.getElementById('question')
+  const operationDisplay = document.getElementById("operation-display")
+  const question = document.getElementById("question")
+  const userAnswer = document.getElementById("answer")
+  userAnswer.focus()
 
   const numA = getRandomNum({ min: 1 })
   const numB = getRandomNum()
@@ -53,7 +55,7 @@ const buildGame = op => {
 
   operationDisplay.innerHTML = op
 
-  switch(op) {
+  switch (op) {
     case "addition":
       answer = numA + numB
       question.innerHTML = `${numA} + ${numB}`
@@ -74,22 +76,23 @@ const buildGame = op => {
   return answer
 }
 
-window.addEventListener('load', e => {
-  const go = document.getElementById('go-button')
-  const game = document.getElementById('math-game')
-  const setup = document.getElementById('setup-form')
-  const userAnswer = document.getElementById('answer')
-  const operationSelect = document.getElementById('operation')
-  const scoreDisplay = document.getElementById('score')
+window.addEventListener("load", e => {
+  const go = document.getElementById("go-button")
+  const game = document.getElementById("math-game")
+  const setup = document.getElementById("setup-form")
+  const userAnswer = document.getElementById("answer")
+  const operationSelect = document.getElementById("operation")
+  const scoreDisplay = document.getElementById("score")
+  const numButtons = document.getElementById("num-buttons")
   let operation = ""
   let answer = 0
-  let score = 0 
+  let score = 0
 
-  go.addEventListener('click', () => {
-    document.getElementById('timer').innerHTML = 30
+  go.addEventListener("click", () => {
+    document.getElementById("timer").innerHTML = 30
     answer = 0
     score = 0
-    userAnswer.innerHTML = ""
+    userAnswer.value = ""
     scoreDisplay.innerHTML = score
     operation = operationSelect.value
     setup.style.display = "none"
@@ -98,62 +101,35 @@ window.addEventListener('load', e => {
     gameTimer(operation)
   })
 
-  userAnswer.addEventListener('input', () => {
+  userAnswer.addEventListener("input", () => {
     checkAnswer(answer)
   })
 
-  btn1.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "1"
-    checkAnswer(answer)
+  const buttons = Array.from(numButtons.getElementsByClassName("btn"))
+  buttons.forEach(btn => {
+    if (btn.value == "clear") {
+      return
+    }
+    const btnName = "btn" + btn.value
+    const btnItem = document.getElementById(btnName)
+    btnItem.addEventListener("click", () => {
+      userAnswer.value = userAnswer.value + btn.value
+      checkAnswer(answer)
+    })
   })
-  btn2.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "2"
-    checkAnswer(answer)
-  })
-  btn3.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "3"
-    checkAnswer(answer)
-  })
-  btn4.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "4"
-    checkAnswer(answer)
-  })
-  btn5.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "5"
-    checkAnswer(answer)
-  })
-  btn6.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "6"
-    checkAnswer(answer)
-  })
-  btn7.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "7"
-    checkAnswer(answer)
-  })
-  btn8.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "8"
-    checkAnswer(answer)
-  })
-  btn9.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "9"
-    checkAnswer(answer)
-  })
-  btn0.addEventListener('click', () => {
-    userAnswer.value = userAnswer.value + "0"
-    checkAnswer(answer)
-  })
-  clear.addEventListener('click', () => {
+  clear.addEventListener("click", () => {
     userAnswer.value = ""
   })
 
   const checkAnswer = () => {
-    if(Number(userAnswer.value) == answer) {
+    if (Number(userAnswer.value) == answer) {
       score++
       scoreDisplay.innerHTML = score
       userAnswer.style.backgroundColor = "lime"
       setTimeout(() => {
         userAnswer.style.backgroundColor = "white"
         userAnswer.value = ""
+        userAnswer.focus()
         answer = buildGame(operationSelect.value)
       }, 500)
     }
