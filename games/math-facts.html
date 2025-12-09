@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play2Learn: Megacool Math Facts</title>
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"  
+        crossorigin="anonymous" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+  />
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg white border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand purple" href="../index.html">Play2Learn Arcade</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gamepad"></i> Games
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item orange" href="anagram-hunt.html"><i class="fa-solid fa-book-open-reader"></i> Awesome Anagram Hunt</a>
+                </li>
+                <li>
+                  <a class="dropdown-item pink" href="math-facts.html"><i class="fa-solid fa-calculator"></i> Megacool Math Facts Practice</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../login.html"><i class="fa-regular fa-face-smile"></i> Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- End Navbar -->
+
+    <div class="pt-3 content">
+      <div class="row justify-content-center">
+        <div class="col-md-6 math p-3">
+          <i class="fa-solid fa-calculator fa-6x float-start pb-3 orange"></i>
+          <h1 class="pink">Megacool Math Game</h1>
+          <p>This is a simple, fun game for practicing basic math. Problems include addition, subtraction, multiplication, and division. The division facts are all without remainders, so you don't have to worry about decimals. Math is megacool!</p>
+          <div id="game" class="pt-4">
+            <h2 class="pb-2 text-center">Math Facts Practice</h3>
+            <div id="setup-form">
+
+              <div class="row">
+                <div class="col-4 text-end">Operation:</div>
+                <div class="col-4">
+                  <select name="operation" id="operation">
+                    <option value="division">Division</option>
+                    <option value="addition">Addition</option>
+                    <option value="subtraction">Subtraction</option>
+                    <option value="multiplication">Multiplication</option>
+                  </select>
+                </div>
+                <div class="col-4"><button id="go-button" class="btn">Go!</button></div>
+              </div>
+
+              <div class="row pt-4 ps-4">
+                <ol>
+                  <li>Select operation.</li>
+                  <li>Press <span class="fw-bold">Go!</span>.</li>
+                  <li>See how many problems you can solve in 30 seconds!</li>
+                </ol>
+              </div>
+
+            </div> <!-- End Setup Form -->
+
+            <div id="math-game" class="text-center">
+              <p id="operation-display" class="text-capitalize"></p>
+              <h3 id="question"></h3>
+              <input type="text" id="answer" name="answer" size="3" class="px-2">
+
+              <div id="num-buttons" class="row justify-content-center pt-4">
+                <div class="row">
+                  <button id="btn1" value="1" class="btn">1</button>
+                  <button id="btn2" value="2" class="btn">2</button>
+                  <button id="btn3" value="3" class="btn">3</button>
+                </div>
+                <div class="row">
+                  <button id="btn4" value="4" class="btn">4</button>
+                  <button id="btn5" value="5" class="btn">5</button>
+                  <button id="btn6" value="6" class="btn">6</button>
+                </div>
+                <div class="row">
+                  <button id="btn7" value="7" class="btn">7</button>
+                  <button id="btn8" value="8" class="btn">8</button>
+                  <button id="btn9" value="9" class="btn">9</button>
+                </div>
+                <div class="row">
+                  <button id="btn0" type="button" value="0" class="btn">0</button>
+                  <button id="clear" type="button" value="clear" class="btn">CLEAR</button>
+                </div>
+              </div>
+
+              <p class="mb-0 mt-4">Score: <span id="score">0</span> </p>
+              <p>Time Left: <span id="timer">30</span> seconds</p>
+            </div> <!-- End Math Game -->
+
+            <div id="game-result" class="text-center">
+              <p id="operation-display2" class="text-capitalize"></p>
+              <p class="fw-bold text-danger">Times up!</p>
+              <h2>Your final score is:</h2>
+              <p class="display-2 fw-bolder" id="final-score"></p>
+              <button id="play-again" class="btn">Play Again!</button>
+            </div> <!-- End Game Result -->
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="row border-top border-3 p-3 footer">
+        <div class="d-flex purple">
+          <div class="me-auto p-2"><p id="copyright"></p></div>
+          <div class="p-2"><a href="../contact-us.html"><i class="fa-solid fa-envelope fa-2x purple"></i></a></div>
+          <div class="p-2"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram fa-2x purple"></i></a></div>
+          <div class="p-2"><a href="https://bsky.app/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-bluesky fa-2x purple"></i></a></div>
+          <div class="p-2"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-2x purple"></i></a></div>
+        </div>
+      </div> <!-- End Bottom Nav -->
+
+    </div> <!-- End Games Info -->
+
+  </div> <!-- End Container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+          crossorigin="anonymous" 
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+  ></script>
+  <script src="https://kit.fontawesome.com/35f7d74202.js" 
+          crossorigin="anonymous"
+          integrity="sha384-vaepow7SO+2U0I8/2Zbwz8H+MDllyqxAL3tIUFseIOoFqita5yHPHob8X06IZSS9"
+  ></script>
+  <script src="../scripts/script.js"></script>
+  <script src="../scripts/math-game.js"></script>
+</body>
+</html>

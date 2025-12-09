@@ -1,12 +1,6 @@
 Todo:
-
-everything on the instructions
-favicon
-images
-play2learn logo
-use bootstrap to make it look nice?
-add photo attribution to about page
-make about page about the making of the site
+check the instructions
+fully test game
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
       rel="stylesheet" 

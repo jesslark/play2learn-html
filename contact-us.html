@@ -4,8 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Play2Learn: Contact Us</title>
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"  
+        crossorigin="anonymous" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+  />
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
-  
+  <div class="container">
+    <nav class="navbar navbar-expand-lg white border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand purple" href="index.html">Play2Learn Arcade</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gamepad"></i> Games
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item orange" href="games/anagram-hunt.html"><i class="fa-solid fa-book-open-reader"></i> Awesome Anagram Hunt</a>
+                </li>
+                <li>
+                  <a class="dropdown-item pink" href="games/math-facts.html"><i class="fa-solid fa-calculator"></i> Megacool Math Facts Practice</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html"><i class="fa-regular fa-face-smile"></i> Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- End Navbar -->
+
+    <div class="pt-3 content">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 contact p-3">
+          <h1 class="pink">Contact Us</h1>
+          <p>This form doesn't actually work! It should appear to work, though. Sorry about that!</p>
+          <form action="javascript:alert('Form Submitted')">
+            <div class="row mb-3">
+              <label for="email" class="col-sm-2 col-form-label">Email: </label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="subject" class="col-sm-2 col-form-label">Subject: </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="subject">
+              </div>
+            </div>
+            <fieldset class="row mb-3">
+              <label for="message" class="col-sm-2 col-form-label">Message: </label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn float-end">Send</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="row border-top border-3 p-3 footer">
+        <div class="d-flex purple">
+          <div class="me-auto p-2"><p id="copyright"></p></div>
+          <div class="p-2"><a href="contact-us.html"><i class="fa-solid fa-envelope fa-2x purple"></i></a></div>
+          <div class="p-2"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram fa-2x purple"></i></a></div>
+          <div class="p-2"><a href="https://bsky.app/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-bluesky fa-2x purple"></i></a></div>
+          <div class="p-2"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-2x purple"></i></a></div>
+        </div>
+      </div> <!-- End Bottom Nav -->
+
+    </div> <!-- End Games Info -->
+
+  </div> <!-- End Container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+          crossorigin="anonymous" 
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+  ></script>
+  <script src="https://kit.fontawesome.com/35f7d74202.js" 
+          crossorigin="anonymous"
+          integrity="sha384-vaepow7SO+2U0I8/2Zbwz8H+MDllyqxAL3tIUFseIOoFqita5yHPHob8X06IZSS9"
+  ></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

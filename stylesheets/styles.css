@@ -9,27 +9,103 @@
   --orange: #FF714B;
   --orange-transp: #ff724bab;
   --orange-high-transp: #ff724b77;
+  --black-transp: #000000ab;
+}
+
+.white {
+  background-color: var(--white);
+}
+
+.purple {
+  color: var(--purple)
+}
+
+.pink {
+  color: var(--pink)
+}
+
+.orange {
+  color: var(--orange)
 }
 
 body {
-  background: linear-gradient(to top, black,black),
-              url(../images/back-to-school.jpg) no-repeat top center;
+  background: linear-gradient(to top, var(--white-high-transp),var(--white-high-transp)),
+              url(../images/school-supplies-tile.jpg);
+  /* The following prevents Chrome from changing the 
+  background color on inputs when autofilled */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
 }
 
-header, .games-info, .footer {
-  background: var(--white-low-transp);
+html {
+  font-size: 18px;
 }
 
 .container {
+  background: var(--white-low-transp);
   max-width: 1200px;
-}
-
-.logo p {
-  display: inline-block;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .carousel-caption {
   background: var(--purple-transp);
   border-radius: 10px;
+}
+
+.anagram button,
+.contact button,
+.login button,
+.register button {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.math button {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.anagram button:hover, 
+.math button:hover,
+.contact button:hover,
+.login button:hover,
+.register button:hover {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+#register,
+#math-game,
+#game-result {
+  display: none;
+}
+
+#math-game,
+#operation-display2 {
+  font-size: 1.5rem;
+}
+
+#num-buttons button {
+  width: 41px;
+  margin: 8px;
+}
+
+#num-buttons #clear {
+  width: 98px;
+}
+
+#num-buttons {
+    width: 198px;
+    margin: auto;
+}
+
+#copyright {
+  line-height: 2;
+}
+
+.footer p, .footer div {
+  margin-bottom: 0;
 }
